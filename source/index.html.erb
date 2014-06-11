@@ -1,20 +1,16 @@
-<img src="http://tiy-durham-june2014-frontend.github.io/iron-slides/images/tiy-logo.png" alt="The Iron Yard logo">
-    <h1>Welcome to The Iron Yard powered by Smashing Boxes.</h1>
-    <h2>Learn to code. Get a job. Guaranteed.</h2>
-    <p>
-      <strong>The Iron Yard Academy</strong> teaches intensive, three-months courses that mentor you into de professional junior level programmer. Our program goes beyond tactical skills and teaches you to think like a <em>software engineer.</em> Programming is a lifelong study, and our process shows you to learn how to <em>learn so you remain valuable for your career</em>.
-    </p>
-    <h2>Locations</h2>
-    <ul>
-      <li><%= link_to 'Asheville, NC', 'http://theironyard.com/locations/asheville' %></li>
-      <li><%= link_to 'Atlanta, GA', 'http://theironyard.com/locations/atlanta' %></li>
-      <li><%= link_to 'Austin, TX', 'http://theironyard.com/locations/austin' %></li>
-      <li><%= link_to 'Charleston, SC', 'http://theironyard.com/locations/charleston' %></li>
-      <li><%= link_to 'Columbia, SC', 'http://theironyard.com/locations/columbia' %></li>
-      <li><%= link_to 'Durham, NC', 'http://theironyard.com/locations/durham' %></li>
-      <li><%= link_to 'Greenvile, NC', 'http://theironyard.com/locations/greenvile' %></li>
-      <li><%= link_to 'Houston, TX', 'http://theironyard.com/locations/houston' %></li>
-      <li><%= link_to 'Spartanburg, SC', 'http://theironyard.com/locations/spartanburg' %></li>
-      <li><%= link_to 'Tampa, FL', 'http://theironyard.com/locations/' %></li>
-    </ul>
-    <%= link_to 'Follow us on twitter', 'https://twitter.com/TheIronYard' %>
+<%= image_tag 'tiy-logo.png' %>
+
+<h1>Welcome to The Iron Yard powered by Smashing Boxes.</h1>
+<h2>Learn to code. Get a job. Guaranteed.</h2>
+<p>
+  <strong>The Iron Yard Academy</strong> teaches intensive, three-months courses       that mentor you into de professional junior level programmer. Our program goes beyond tactical skills and teaches you to think like a <em>software engineer.</em> Programming is a lifelong study, and our process shows you to learn how to <em>learn so you remain valuable for your career</em>.
+</p>
+
+<h2>Locations</h2>
+<ul>
+  <% location.each do |place, web| %>
+  <li><%= link_to place, web %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Follow us on twitter', 'https://twitter.com/TheIronYard' %>

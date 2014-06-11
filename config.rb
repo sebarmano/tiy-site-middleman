@@ -36,16 +36,26 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def location
+    tiypage = 'http://theironyard.com/locations/'
+    { 'Asheville, NC' => tiypage +'asheville',
+      'Atlanta, GA' => tiypage + 'atlanta',
+      'Austin, TX' => tiypage + 'austin',
+      'Charleston, SC' => tiypage + 'charleston',
+      'Columbia, SC' => tiypage + 'columbia',
+      'Durham, NC' => tiypage + 'columbia',
+      'Greenville, SC' => tiypage + 'greenville',
+      'Houston, TX' => tiypage + 'houston',
+      'Spartanburg, SC' => tiypage + 'spartanburg',
+      'Tampa, SC' => tiypage + 'tampa'}
+  end
+end
 
 set :css_dir, 'stylesheets'
 
